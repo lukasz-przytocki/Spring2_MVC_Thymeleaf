@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Schronisko</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+<div class="header">
+
+    <h1>Schronisko Reksio i Klakier</h1>
+</div>
+
+<div class="content">
+    <h2>Zwierzaki szukające domu</h2>
+
+
+    <a th:href="@{'/zwierzak?animal='+ ${animal.getName()}}" class="animal" th:each="animal: ${animals}">
+        <img th:src="${animal.getImg()}" style="width: 300px">
+        <div class="animal-info ml-4">
+            <h2 th:text="${animal.getName()}" >Azor</h2>
+            <p th:text="${animal.description}" ></p>
+        </div>
+    </a>
+
+
+</div>
+</body>
+</html>

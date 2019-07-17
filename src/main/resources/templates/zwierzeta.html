@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zwierzeta</title>
+</head>
+<body>
+<h1 style="background: azure">Schronisko Reksio i Klakier</h1>
+<ul>
+    <li><a href="http://localhost:8080/">Powrót do listy</a></li>
+</ul>
+
+<h4 th:text="${animal.getName()}"></h4>
+<img th:src="${animal.getImg()}" style="width: 300px">
+<p th:text="${animal.getDescription()}"></p>
+
+</body>
+</html>
