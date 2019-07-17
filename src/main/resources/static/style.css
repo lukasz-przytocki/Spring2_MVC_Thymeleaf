@@ -1,0 +1,15 @@
+.header{
+    background: #ccc;
+    padding: 30px;
+}
+.content{
+    padding: 30px;
+}
+.animal{
+    display: flex;
+    flex-direction: row;
+}
+.animal-info{
+    display: flex;
+    flex-direction: column;
+}
